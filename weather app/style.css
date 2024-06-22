@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+  outline: none;
+}
+
+body{
+  background-image: url(bg.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-size: 14px;
+  padding: 50px;
+}
+
+
+.container{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.weather-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input{
+  padding: 8px 5px;
+  width: 300px;
+  border-radius: 3px;
+  border: 1px solid #bcbcbc;
+  font-size: 12px;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+button{
+  padding: 8px 10px;
+  border: 1px solid #bcbcbc;
+  font-size: 12px;
+  border-radius: 3px;
+  background:#C3B1E1;
+  color: white;
+}
+button:hover{
+  cursor: pointer;
+  color:black;
+}
+
+  
+
+.weather-card{
+  display: none;
+  margin-top: 20px;
+  border-radius: 5px;
+  padding: 20px 0;
+  width: 70%;
+  position: relative;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+  border: 1px solid  rgba(0,0,0,0.09);;
+  background-color: #C3B1E1;
+  opacity: 0.7;
+}
+
+.weather-card > div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#temperature{
+  font-size: 24px;
+}
+
+#temperature div{
+  font-size: 12px;
+}
+
+#condition{
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+#condition img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.1);
+  overflow: hidden;
+  
+}
+
+#humidity i, #windSpeed i{
+  font-size: 30px;
+  color: #FFA500;
+}
+
+#humidity,#windSpeed{
+  margin-inline: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#error{
+  color:black;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.loader{
+  display: none;
+  margin-top: 20px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
